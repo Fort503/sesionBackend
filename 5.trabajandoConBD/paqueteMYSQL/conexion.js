@@ -17,3 +17,5 @@ export async function obtenerConexion() {
         throw error;
     }
 }
+
+obtenerConexion();

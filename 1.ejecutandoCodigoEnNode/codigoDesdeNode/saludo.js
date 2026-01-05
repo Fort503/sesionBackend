@@ -1,4 +1,4 @@
-const nombre = "Rey enigma";
+const nombre = "Pepe Cuenca";
 const fecha = "31/12/2023";
 
 function saludar(nombre, fecha) {

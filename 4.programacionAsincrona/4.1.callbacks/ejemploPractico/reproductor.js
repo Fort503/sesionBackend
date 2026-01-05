@@ -1,24 +1,5 @@
 import cowsay from 'cowsay';
 
-const youtube = (cancion) => {
-    return cowsay.say({ 
-        text: `[YOUTUBE MUSIC] \nReprod: ${cancion}\nEstado: HD Audio`, 
-        f: 'dragon' 
-    });
-};
-
-const spotify = (cancion) => {
-    return cowsay.say({ 
-        text: `[SPOTIFY] \nReprod: ${cancion}\nEstado: Premium`, 
-    });
-};
-
-const soundcloud = (cancion) => {
-    return cowsay.say({ 
-        text: `[SOUNDCLOUD] \nReprod: ${cancion}\nEstado: Indie`, 
-        f: 'stegosaurus' 
-    });
-};
 
 const reproducirEnPlataforma = (nombreCancion, servicioCallback) => {
     let demora = 2000;
