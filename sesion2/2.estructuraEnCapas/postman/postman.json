@@ -1,0 +1,119 @@
+{
+  "info": {
+    "name": "API de Tareas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  },
+  "item": [
+    {
+      "name": "Tareas",
+      "item": [
+        {
+          "name": "Crear nueva tarea",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Mi primera tarea\",\n  \"description\": \"Esta es una descripción de ejemplo\",\n  \"isCompleted\": false\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/tareas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["tareas"]
+            },
+            "description": "Endpoint para crear una nueva tarea"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todas las tareas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/tareas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["tareas"]
+            },
+            "description": "Endpoint para obtener todas las tareas"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener tarea por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/tareas/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["tareas", "1"]
+            },
+            "description": "Endpoint para obtener una tarea específica por su ID"
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar tarea",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Tarea actualizada\",\n  \"description\": \"Descripción actualizada\",\n  \"isCompleted\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/tareas/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["tareas", "1"]
+            },
+            "description": "Endpoint para actualizar una tarea existente"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar tarea",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/tareas/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["tareas", "1"]
+            },
+            "description": "Endpoint para eliminar una tarea"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "type": "string"
+    }
+  ]
+}
